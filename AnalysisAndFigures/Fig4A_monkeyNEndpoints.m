@@ -60,7 +60,7 @@ f.Renderer = 'Painters';
 directionInd = 1;
 directionData = nelsonData([nelsonData.direction]==directionInd);
 numJackpotTrials = sum([directionData.reward]==4);
-jackpotEndpoints = NaN(numJackpotTrials,2);
+jackpotEndpoints = nan(numJackpotTrials,2);
 jackpotTrialInd = 1;
 
 % Plot reach target
@@ -209,5 +209,3 @@ title(['Monkey N ' num2str(100*nhundred) ' Reach Endpoints'])
 figname = 'Fig4A_monkeyNEndpoints';
 saveas(gcf,['MATLABFigs\' figname])
 saveas(gcf,['SVGs\' figname '.svg'])
-
-size(jackpotEndpoints)

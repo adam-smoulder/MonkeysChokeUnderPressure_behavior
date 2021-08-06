@@ -3,7 +3,7 @@
 %%% Adam Smoulder, 7/27/20 (edit 8/24/20)
 
 % Load subject data behavior file
-load('DataFolder\FordTubes_minimumTubeFeatures_27-Jul-2020133051');
+load('FordTubes_minimumTubeFeatures_27-Jul-2020133051');
 
 %% Extract counts by reward, day, and status
 trialStatusLabels = [behavior.trialStatusLabels];

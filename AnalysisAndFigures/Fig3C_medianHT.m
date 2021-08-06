@@ -106,6 +106,7 @@ nBadHalfway_bySubject_byReward = cellfun(@(x) sum(isnan(x)), midreachTime_bySubj
 nBadHoming_bySubject_byReward = cellfun(@(x) sum(isnan(x)), homingTime_bySubject_byReward)
 
 %% NOTE homing times are NOT normally distributed
+figure
 qqplot(homingTime_bySubject_byReward{1,4})
 
 %% as an example^ so mean isn't the best thing to use. Median is more

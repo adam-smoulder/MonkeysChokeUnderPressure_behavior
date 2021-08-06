@@ -1,5 +1,5 @@
 %%% This script makes the "main effect" figure from the behavior data. This
-%%% is Figure 1C for now.
+%%% is Figure 1B for now.
 %%%
 %%% Adam Smoulder, 7/23/20 (edit 7/27/20)
 
@@ -22,8 +22,8 @@ for f = 1:nsubjects
     curCounts = n_byCond_bySubject{f};
     eventCounts = squeeze(sum(curCounts(:,:,1),1)); % successes are the first page (dim 3); we marginalize over directions
     totalCounts = squeeze(sum(sum(curCounts,3),1)); % all trials by reward size
-    [~, bootMean, ~, ~, bar95low, bar95up, bootSem] = ...
-        bootstrapBinaryEvent(eventCounts,totalCounts,nboots);
+    [~, bootMean, ~, ~, bar95low, bar95up, bootSem] = ... % bootSem is the std of the bootstraps; for SEM of a bernoulli, this is a roughly accurate between [10 90]% success rate
+        bootstrapBinaryEvent(eventCounts,totalCounts,nboots); %^ but this is all just for visualization, we don't use it for stats or anything!
     succRate_mean_bySubject_byReward(f,:) = bootMean./totalCounts'*100;
     succRate_bar95low_bySubject_byReward(f,:) = bar95low./totalCounts'*100;
     succRate_bar95up_bySubject_byReward(f,:) = bar95up./totalCounts'*100;
@@ -62,7 +62,7 @@ for f = 1:nsubjects
 end; clear f
 set(gcf,'position',[418 548 1042 400])
 
-
+% Show all p-vals from binomial proportion test
 pvals_byRewardXReward_bySubject
 
 
@@ -81,4 +81,5 @@ for f = 1:nsubjects
         disp(['L->J p = ' num2str(pvals_byRewardXReward_bySubject(3,4,f))])
 end; clear f
 
+% Show differences from S->L and L->J
 disp(diff(succRate_mean_bySubject_byReward(:,[1 3 4]),[],2))

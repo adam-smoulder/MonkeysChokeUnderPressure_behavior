@@ -7,9 +7,23 @@
 %  - the few -111s we have are misstarts (-111 = 0)
 %  - we'll remove any excluded trials (0s removed)
 %  - overshoots = targ hold overshoots = scuff ([-22 -32 -31] = -22)
+%       - -22 indicates that the animal reached past the center of the
+%       reach target without entering
+%       - -32 indicates that the animal entered the reach target and exited
+%       the far side of it, effectively "blowing through" the target
+%       - -31 is a "scuff", where the inside of the reach target is kinda
+%       grazed. These are more overshoot-y than undershoot-y
 %  - undershoots = slow ([-23 -24 -25] = -23)
+%       - -23 = reach landed outside of the target, not enough time for a
+%       corrective movement
+%       - -24 = so slow of a reaction/start that there's basically no way
+%       they were going to make it
+%       - -25 = could've made it with a fast enough reach, but were still
+%       too slow
 %  - target hold failures = jitter also ([-34 -35] = -34)
-%
+%       - -34 = target hold drift, hand landed well in target but falls out
+%       - -35 = "jitter" - hand landed juuuust inside the target edge, but
+%       natural-looking hand jitter causes the cursor to leave = fail
 % Assumes that behavior_bySubject is in the workspace, along with nsubjects
 % and subjectNames
 %

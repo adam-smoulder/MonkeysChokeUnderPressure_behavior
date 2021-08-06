@@ -17,8 +17,8 @@ function [pValues,zStats,hValues] =...
 % proportions are equal. I think it implicitly assumes that the proportion
 % can be seen as the Bernoulli parameter for the given group.
 %
-% At a glance, I got similar results for this vs. a two-tailed
-% bootstrapping test (this is a bit higher power), so it checks out.
+% As a quick check, I got similar results for this vs. a two-tailed
+% bootstrapping test (this is a smidge higher power), so it checks out.
 %
 % correctTrials = 1 x numRewards vector of the number of correct trials to
 % each reward
@@ -46,17 +46,17 @@ if totalCountSize(1) > totalCountSize(2)
 end
 
 % Make a matrix to store the z statistic in. 
-zStats = NaN(eventCountSize(2),eventCountSize(2));
-pValues = NaN(size(eventCount,2),eventCountSize(2));
-hValues = NaN(eventCountSize(2),eventCountSize(2));
+zStats = nan(eventCountSize(2),eventCountSize(2));
+pValues = nan(size(eventCount,2),eventCountSize(2));
+hValues = nan(eventCountSize(2),eventCountSize(2));
 
 % Run the binomial proportion test on the counts for each condition.
 for i = 1:eventCountSize(2)
-    n1 = totalCount(1,i);
-    p1 = eventCount(1,i)/n1;
+    n1 = totalCount(i);
+    p1 = eventCount(i)/n1;
     for j = 1:size(eventCount,2)
-        n2 = totalCount(1,j);
-        p2 = eventCount(1,j)/n2;
+        n2 = totalCount(j);
+        p2 = eventCount(j)/n2;
         phat = (n1*p1 + n2*p2)/(n1 + n2);
         zStats(i,j) = (p1 - p2)/sqrt(phat*(1-phat)*(1/n1 + 1/n2));
         

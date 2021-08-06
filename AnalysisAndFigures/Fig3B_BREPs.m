@@ -16,7 +16,7 @@ BREP_byRew_mean = nan(nsubjects,nrewards,2);
 BREP_byRew_semed = nan(nsubjects,nrewards,2);
 BREP_byRew_sem = nan(nsubjects,nrewards,2);
 
-%% Now realllly Looking at ballistic reach endpoint predictions
+%% Now really Looking at ballistic reach endpoint predictions
 
 nboots = 10000; % for calculating SE of median
 

@@ -15,12 +15,10 @@ function [allBoots, bootMean, boot95low, boot95up, bar95low, bar95up, SE] = boot
 % - bootMean: [size(eventCounts)] matrix with the average of the bootstraps
 % - boot95low: 2.5 percentile of results for 95% CI (same size as bootMean)
 % - boot95up: 97.5 percentile of results for 95% CI (same size as bootMean)
-% - bar95low: how far below the mean the 2.5 percentile is
+% - bar95low: how far below the mean the 2.5 percentile is. Easier than the
+% above output to use with matlab's errorbar function...
 % - bar95up: how far above the mean the 97.5 percentile is
 % = SE: standard error of the metric (stdev of the bootstrap)
-%
-% These last 2 are redundant with the 2 before it; I just use em bc that's
-% what MATLAB's errorbar function takes.
 %
 % Adam Smoulder, 6/2/20 (edit 7/27/20)
 

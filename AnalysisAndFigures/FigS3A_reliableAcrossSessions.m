@@ -45,8 +45,6 @@ succRate_bySubject_byDay_byReward = cellfun(@(x,y) 100*x./y,...
 %% Make the plot for each animal
 rewNames = {'Small','Medium','Large','Jackpot'};
 % colors = colormap(copper);
-% colors = colormap(pink); colors = colors(20:44,:)
-% colors = getDistinctColors('RANDOM_ORDER',1)
 colors = ... % From a site of random distinguishable colors
 [[230, 25, 75];
 [60, 180, 75]; 

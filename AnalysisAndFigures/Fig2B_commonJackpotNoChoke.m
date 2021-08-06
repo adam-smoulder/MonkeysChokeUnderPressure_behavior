@@ -20,7 +20,7 @@
 %%% Adam Smoulder, 7/27/20
 
 % Load subject data behavior file
-load('DataFolder\EarlCJ_behaviorFeatures_20210107');
+load('EarlCJ_behaviorFeatures_20210107');
 
 %% Extract counts by reward, day, and status
 trialStatusLabels = [behavior.trialStatusLabels];
@@ -58,33 +58,8 @@ nboots = 10000;
 succRate_mean = nsucc_bootMean'./n_byReward*100;
 succRate_sem = nsucc_bootSem'./n_byReward*100;
 
-% %% Make a figure
-% rewNames = {'S','M','L','CJ','J'};
-% 
-% figure
-% errorbar(rewards,succRate_mean,succRate_sem,'k.-','linewidth',0.5,'markersize',20)
-% axis([0.5 0.5+nrewards 42.5 87.5])
-% set(gca,'fontname','arial')
-% set(gca,'fontsize',18)
-% xticks(1:nrewards)
-% xticklabels(rewNames)
-% % xtickangle(45)
-% yticks([45 65 85])
-% ylabel('Success Rate (%)')
-% title(['Monkey E, ' num2str(ndays) ' sessions'])
-% set(gcf,'position',[418 548 521 400])
-% 
-% pvals_byRewardXReward
-% n_byReward
-% 
-% 
-% % Save it!
-% figname = 'Fig3C_commonJackpotNoChoke';
-% saveas(gcf,figname)
-% saveas(gcf,[figname '.svg'])
 
-
-%% Try making it a slightly diff style
+%% Plot it!
 CJColor = 0.9*[1 0 1];
 rewNames = {'S','M','L','J (CJ)'};
 

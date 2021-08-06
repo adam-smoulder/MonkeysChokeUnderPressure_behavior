@@ -1536,7 +1536,7 @@
     ><g transform="translate(346.8674,173.5853)" style="stroke-linecap:butt; fill:rgb(51,51,51); text-rendering:geometricPrecision; image-rendering:optimizeQuality; color-rendering:optimizeQuality; stroke-linejoin:round; stroke:rgb(51,51,51); color-interpolation:linearRGB; stroke-width:0.6667;"
     ><circle r="2.6667" style="stroke:none;" cx="0" cy="0"
     /></g
-    ><g transform="translate(219.5081,149.8218)" style="stroke-linecap:butt; fill:blue; text-rendering:geometricPrecision; color-rendering:optimizeQuality; image-rendering:optimizeQuality; color-interpolation:linearRGB; stroke:blue;"
+    ><g transform="translate(219.5081,149.8218)" style="stroke-linecap:butt; fill:blue; text-rendering:geometricPrecision; color-rendering:optimizeQuality; image-rendering:optimizeQuality; stroke:blue; color-interpolation:linearRGB; stroke-width:0.6667;"
     ><path style="fill:none;" d="M-4 0 L0 5.32 L4 0 L0 -5.32 Z"
       /><path d="M-4 0 L0 5.32 L4 0 L0 -5.32 Z" style="fill:none;" transform="translate(-4.9521,45.726)"
       /><path d="M-4 0 L0 5.32 L4 0 L0 -5.32 Z" style="fill:none;" transform="translate(-39.9799,77.8319)"

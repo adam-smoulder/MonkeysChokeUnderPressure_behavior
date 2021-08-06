@@ -8,7 +8,7 @@
 %%% Adam Smoulder, 7/27/20
 
 % Load subject data behavior file
-load('DataFolder\EarlRL_behaviorFeatures_20210107');
+load('EarlRL_behaviorFeatures_20210107');
 
 %% Extract counts by reward, day, and status
 trialStatusLabels = [behavior.trialStatusLabels];

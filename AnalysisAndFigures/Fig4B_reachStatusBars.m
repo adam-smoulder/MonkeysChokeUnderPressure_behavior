@@ -17,6 +17,7 @@ for f = 1:nsubjects
     trialStatusLabels = trialStatusLabels_bySubject{f};
     trialStatusLabels(ismember(trialStatusLabels,[-22 -31 -32])) = -22;
     trialStatusLabels(ismember(trialStatusLabels,[-23 -24 -25])) = -23;
+    trialStatusLabels(ismember(trialStatusLabels,[1 -34 -35])) = 1; % Target hold failures are still "Reach epoch successes"
     trialsToKeep = ismember(trialStatusLabels,[1 -22 -23]);
     ngood = sum(trialsToKeep);
     goodBeh = curBeh(trialsToKeep);
@@ -36,6 +37,7 @@ numSubjects = length(subjectNames);
 numRewards = length(rewardNames);
 statusCodes = [1,-23,-22]; %Suc, Under, Over
 numStatus = length(statusCodes);
+
 %% Quick visual check to confirm each monkey's data only includes desired status codes
 for subject = 1:numSubjects
     subjectData = behavior_bySubject{subject,1};
