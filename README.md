@@ -7,7 +7,7 @@ To reproduce the figures/tables of the manuscript:
 - Download the data files from figshare to some folder
 - Download the MATLAB files from this repo
 - In MATLAB, add the folder with the data files to your path
-  - I.e.  addpath(<<INSERT DIRECTORY PATH HERE>>) 
+  - I.e.  addpath(*INSERT DIRECTORY PATH HERE*) 
 - Run the scripts for each of the figures/tables!
   
 A description of the data files is below. If any of the functions/scripts are unclear or don't work, please let me know!
