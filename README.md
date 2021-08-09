@@ -103,4 +103,5 @@ The following are trial status labels that are not analyzed in this manuscript a
   - 0/-111/-14 = error, trial that did not occur due to system glitch/lag or had cursor drops; should be removed before analysis (1.00%)
   - -13/-20 = quitout, Large hand motion away from the reach target, indicating quitting (0.51%)
   - -21 = no attempt, cursor basically never leaves center target (reaction time > 500ms) (0.65%)
+  - -26 = wild, reach fails and cursor deviates greatly (> 3 cm) from straight path, making it unfair to call over nor undershoot (0.11%)
   - -33 = early return, cursor begins returning towards center (speed > 0.1 m/s) and exits reach target before reward (0.05%)
